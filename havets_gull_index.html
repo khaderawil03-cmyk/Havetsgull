@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Havets Gull – Billig fisk rett på bordet</title>
+  <style>
+    :root {
+      --blue:#0d47a1;
+      --sea:#1e90ff;
+      --gold:#ffd166;
+      --bg:#f5fbff;
+      --ink:#123;
+    }
+    * { box-sizing:border-box; }
+    body {
+      margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,Helvetica,sans-serif;
+      color:var(--ink);
+      background:linear-gradient(180deg, #eef7ff 0%, #f9fcff 100%);
+    }
+    header {
+      background: radial-gradient(1000px 400px at 10% 0%, rgba(13,71,161,.08), transparent),
+                  radial-gradient(1000px 400px at 90% -20%, rgba(30,144,255,.12), transparent),
+                  #ffffff;
+      padding: 24px 16px;
+      display:flex;
+      align-items:center;
+      gap:16px;
+      border-bottom: 1px solid #e6eef8;
+      position: sticky;
+      top:0;
+      z-index:5;
+    }
+    header img.logo { width:72px; height:auto; }
+    header .brand h1 { margin:0; font-size:clamp(20px,3vw,32px); color:var(--blue); }
+    header .brand p  { margin:2px 0 0; color:#345; }
+    .container { max-width:1100px; margin:0 auto; padding: 24px 16px 60px; }
+    .hero {
+      background: linear-gradient(135deg, rgba(13,71,161,.06), rgba(30,144,255,.10));
+      border:1px solid #e1ecfb;
+      border-radius:16px;
+      padding: 28px;
+      text-align:center;
+      margin: 16px 0 24px;
+    }
+    .hero h2 { margin:0 0 8px; font-size: clamp(22px,3.6vw,36px); color:var(--blue);}
+    .hero p  { margin:0; font-size: clamp(14px,2.5vw,18px); color:#456; }
+    .grid {
+      display:grid; gap:16px;
+      grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+      margin: 22px 0 8px;
+    }
+    .card {
+      background:#fff;
+      border:1px solid #e6eef8;
+      border-radius:14px;
+      padding:18px;
+      box-shadow: 0 6px 24px rgba(13,71,161,.06);
+      position: relative;
+      overflow:hidden;
+    }
+    .card.best::after {
+      content:"Mest verdi";
+      position:absolute; top:12px; right:-38px;
+      transform: rotate(35deg);
+      background:var(--gold); color:#5a4100;
+      font-weight:700; padding:6px 46px; font-size:12px;
+      box-shadow:0 2px 10px rgba(0,0,0,.08);
+    }
+    .card h3 { margin:0 0 6px; color:var(--blue); font-size:20px; }
+    .qty { color:#345; margin:0 0 12px; }
+    .price { font-size:26px; font-weight:800; color:#0a3b8a; margin: 0 0 8px; }
+    .perkg { color:#2b6; font-weight:600; margin:0 0 12px; }
+    .cta {
+      display:inline-block; text-decoration:none; text-align:center;
+      background: linear-gradient(180deg, var(--sea), #157ef0);
+      color:white; font-weight:700; padding:10px 14px;
+      border-radius:10px; border:0; cursor:pointer;
+      box-shadow:0 8px 18px rgba(21,126,240,.25);
+    }
+    .cta:hover { filter:brightness(1.05); }
+    .note { font-size:13px; color:#567; margin-top:6px; }
+    .why { margin: 28px 0 6px; }
+    .why h4 { color:var(--blue); margin:0 0 6px; }
+    .why ul { margin:10px 0 0 18px; line-height:1.6; }
+    footer {
+      margin-top: 36px;
+      padding: 20px 16px;
+      background:#0c2e66;
+      color:#dfe9ff;
+      text-align:center;
+      font-size:14px;
+    }
+    .tagline { color:#0d47a1; font-weight:700; }
+  </style>
+</head>
+<body>
+  <header>
+    <img class="logo" src="havets_gull_logo.png" alt="Havets Gull logo">
+    <div class="brand">
+      <h1>Havets Gull</h1>
+      <p>Billig fisk rett på bordet – mye billigere enn butikken</p>
+    </div>
+  </header>
+
+  <div class="container">
+    <section class="hero">
+      <h2>Fersk kvalitet. Gode priser. Klare pakker.</h2>
+      <p>Velg størrelsen som passer – små pakker for enkel hverdagsmat, store bokser for maksimal verdi per kilo.</p>
+    </section>
+
+    <section class="grid">
+      <article class="card best">
+        <h3>Mega boks laks</h3>
+        <p class="qty">20 kg</p>
+        <p class="price">2&nbsp;300 kr</p>
+        <p class="perkg">≈ 115 kr/kg</p>
+        <a class="cta" href="#bestill">Bestill</a>
+        <p class="note">Perfekt for storfamilie og frysere – laveste kg-pris.</p>
+      </article>
+
+      <article class="card">
+        <h3>Stor boks laks</h3>
+        <p class="qty">12 kg</p>
+        <p class="price">1&nbsp;500 kr</p>
+        <p class="perkg">≈ 125 kr/kg</p>
+        <a class="cta" href="#bestill">Bestill</a>
+        <p class="note">Mest populære – mye fisk for pengene.</p>
+      </article>
+
+      <article class="card">
+        <h3>Medium boks miks</h3>
+        <p class="qty">6 kg</p>
+        <p class="price">850 kr</p>
+        <p class="perkg">≈ 142 kr/kg</p>
+        <a class="cta" href="#bestill">Bestill</a>
+        <p class="note">Fin variasjon – passer ukeshandelen.</p>
+      </article>
+
+      <article class="card">
+        <h3>Liten pakke laks</h3>
+        <p class="qty">3 kg</p>
+        <p class="price">500 kr</p>
+        <p class="perkg">≈ 167 kr/kg</p>
+        <a class="cta" href="#bestill">Bestill</a>
+        <p class="note">Smart start – lett å få plass i fryseren.</p>
+      </article>
+
+      <article class="card">
+        <h3>Mini pakke miks</h3>
+        <p class="qty">1,5 kg</p>
+        <p class="price">300 kr</p>
+        <p class="perkg">≈ 200 kr/kg</p>
+        <a class="cta" href="#bestill">Bestill</a>
+        <p class="note">Test pakke – billig per måltid.</p>
+      </article>
+    </section>
+
+    <section class="why">
+      <h4>Hvorfor «Havets Gull»?</h4>
+      <ul>
+        <li><span class="tagline">Billigere enn butikk:</span> Pakkepriser og volum gir bedre kg-pris.</li>
+        <li><span class="tagline">Praktisk:</span> Ferdigpakket – rett i fryseren.</li>
+        <li><span class="tagline">Sunt & godt:</span> Fisk er supert for både hverdagsmat og helgekos.</li>
+      </ul>
+    </section>
+
+    <section id="bestill" class="hero" style="margin-top:24px;">
+      <h2>Bestill enkelt</h2>
+      <p>Send oss en melding eller kom innom – prisene gjelder så langt lageret rekker.</p>
+      <p style="margin-top:10px;">
+        <strong>Kontakt:</strong> <a href="mailto:bestilling@havetsgull.no">bestilling@havetsgull.no</a>
+        &nbsp;•&nbsp; <a href="tel:+4700000000">+47 00 00 00 00</a>
+      </p>
+      <p class="note">Bytt ut e-post og telefon til dine egne detaljer før publisering.</p>
+    </section>
+  </div>
+
+  <footer>
+    © 2025 Havets Gull · «Billig fisk rett på bordet»
+  </footer>
+</body>
+</html>
